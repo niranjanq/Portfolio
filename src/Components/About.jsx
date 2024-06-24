@@ -13,7 +13,7 @@ function About() {
         <div className="flex-1 ml-4 border-t-2 border-black"></div>
       </div>
       <div className="flex flex-col md:flex-row">
-        <div className="md:w-2/3 space-y-4">
+        <div className="md:w-2/3 space-y-4 p-10">
           <div className="flex items-center space-x-4">
             <div className="bg-black p-4 rounded-md text-3xl text-white font-bold">
               H
