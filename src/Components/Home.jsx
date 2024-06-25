@@ -46,7 +46,7 @@ function Home() {
                 </div>
               </a>
             </div>
-            <div className="flex flex-col md:flex-row px-12 justify-evenly space-y-6 md:space-y-0 items-center ">
+            <div className="flex flex-col md:flex-row px-12 justify-evenly space-y-6 md:space-y-0 items-center">
               <div className="space-x-8">
                 <button className="bg-slate-600 hover:bg-black duration-300 text-white font-bold py-2 px-4 rounded-full mt-5">
                   <a
@@ -66,7 +66,7 @@ function Home() {
               </div>
             </div>
           </div>
-          <div className="md:w-1/2 md:ml-40 md:mt-20 order-1 mt-8">
+          <div className="md:w-1/2 md:ml-40 md:mt-20 order-1 mt-8 flex justify-center">
             <img
               src={Logo}
               alt=""
@@ -81,4 +81,3 @@ function Home() {
 }
 
 export default Home;
-
