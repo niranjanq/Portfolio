@@ -24,14 +24,20 @@ const HorizontalScrollCarousel = () => {
 
   return (
     <section ref={targetRef} className="relative h-[300vh] bg-white">
-      <div className="sticky top-0 flex h-screen items-center overflow-hidden lg:overflow-x-auto sm:overflow-y-auto sm:h-auto lg:h-screen">
-        <motion.div
-          style={{ x }}
-          className="flex gap-4 lg:flex-row sm:flex-col"
-        >
-          {cards.map((card) => {
-            return <Card card={card} key={card.id} />;
-          })}
+      {/* Mobile: vertical scroll */}
+      <div className="block lg:hidden sm:overflow-y-auto sm:h-screen">
+        <div className="flex flex-col items-center gap-4">
+          {cards.map((card) => (
+            <Card card={card} key={card.id} />
+          ))}
+        </div>
+      </div>
+      {/* Large devices: horizontal scroll */}
+      <div className="hidden lg:flex sticky top-0 h-screen items-center overflow-hidden">
+        <motion.div style={{ x }} className="flex gap-4">
+          {cards.map((card) => (
+            <Card card={card} key={card.id} />
+          ))}
         </motion.div>
       </div>
     </section>
