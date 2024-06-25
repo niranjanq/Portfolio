@@ -3,7 +3,7 @@ import { useRef } from "react";
 
 const Example = () => {
   return (
-    <div className="bg-neutral-500 ">
+    <div className="bg-neutral-500">
       <div className="flex h-20 items-center justify-center">
         <span className="font-bold uppercase text-2xl text-neutral-200 hover:text-teal-200 hover:cursor-pointer duration-1000">
           Projects
@@ -24,8 +24,11 @@ const HorizontalScrollCarousel = () => {
 
   return (
     <section ref={targetRef} className="relative h-[300vh] bg-white">
-      <div className="sticky top-0 flex h-screen items-center overflow-hidden">
-        <motion.div style={{ x }} className="flex gap-4">
+      <div className="sticky top-0 flex h-screen items-center overflow-hidden lg:overflow-x-auto sm:overflow-y-auto sm:h-auto lg:h-screen">
+        <motion.div
+          style={{ x }}
+          className="flex gap-4 lg:flex-row sm:flex-col"
+        >
           {cards.map((card) => {
             return <Card card={card} key={card.id} />;
           })}
@@ -39,8 +42,8 @@ const Card = ({ card }) => {
   return (
     <a
       href={card.link}
-          key={card.id}
-          target="_blank"
+      key={card.id}
+      target="_blank"
       className="group relative h-[450px] w-[450px] overflow-hidden bg-neutral-200"
     >
       <div
