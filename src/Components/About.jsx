@@ -89,7 +89,7 @@ function About() {
           <div>
             <div className="flex items-center mb-2">
               <MdSentimentSatisfied className="text-2xl text-black mr-2" />
-              <h2 className="text-2xl font-bold text-black">For Fun </h2>
+              <h2 className="text-2xl font-bold text-black">Interests</h2>
             </div>
             <div className="flex flex-wrap space-x-2">
               {[
