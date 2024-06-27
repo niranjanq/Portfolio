@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Logo from "/Logo.svg"
+import img from "/img.png"
 import { CgMenuRightAlt } from "react-icons/cg";
 import { IoClose } from "react-icons/io5";
 
@@ -17,7 +17,7 @@ function Navbar() {
       <div className="max-w-screen-2xl container mx-auto px-4 md:px-20 h-16 shadow-lg top-0 left-0 right-0">
         <div className="flex justify-between h-16 items-center font-semibold">
           <div className="flex space-x-2">
-            <img src={Logo} className="h-12 w-12 rounded-full" alt="" />
+            <img src={img} className="h-12 w-12 rounded-full" alt="" />
             <h1 className="font-semibold text-xl cursor-pointer">
               Niranj<span className="text-red-600 text-2xl">an</span> Panda
               <p>Full Stack Developer</p>
