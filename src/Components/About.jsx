@@ -40,8 +40,7 @@ function About() {
           <p className="text-lg">
             I'm passively looking for new positions where I can merge my love
             for code with my love for the canvas. If you think you've got an
-            opening that I might like, let's connect{" "}
-            <FaEnvelope className="inline" />
+            opening that I might like, let's connect...
           </p>
           <div className="flex space-x-4">
             <a
