@@ -1,5 +1,5 @@
 import { useState } from "react";
-import img from "/img.png"
+import img from "/img.png";
 import { CgMenuRightAlt } from "react-icons/cg";
 import { IoClose } from "react-icons/io5";
 
@@ -34,17 +34,26 @@ function Navbar() {
                 </li>
               ))}
             </ul>
-            <div onClick={() => setMenu(!menu)} className="md:hidden cursor-pointer">
+            <div
+              onClick={() => setMenu(!menu)}
+              className="md:hidden cursor-pointer"
+            >
               {menu ? <IoClose size={24} /> : <CgMenuRightAlt size={24} />}
             </div>
           </div>
         </div>
       </div>
       <div
-        className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform ${menu ? "translate-x-0" : "-translate-x-full"} transition-transform duration-300 ease-in-out md:hidden`}
+        className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform ${
+          menu ? "translate-x-0" : "-translate-x-full"
+        } transition-transform duration-300 ease-in-out md:hidden`}
       >
         <div className="flex justify-end p-4">
-          <IoClose size={24} onClick={() => setMenu(false)} className="cursor-pointer" />
+          <IoClose
+            size={24}
+            onClick={() => setMenu(false)}
+            className="cursor-pointer"
+          />
         </div>
         <ul className="flex flex-col items-center space-y-6 mt-10 font-bold text-xl">
           {navItems.map(({ id, text }) => (
