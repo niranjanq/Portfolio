@@ -2,7 +2,7 @@
 import { ReactTyped } from "react-typed";
 import { FaLinkedin, FaGithubSquare } from "react-icons/fa";
 import QR from "/QR.png";
-import Logo from "/Logo.jpg";
+import Image from "/Image.jpeg";
 
 function Home() {
   const qrCodeLink = "https://resume-nw.netlify.app/";
@@ -68,7 +68,7 @@ function Home() {
           </div>
           <div className="md:w-1/2 md:ml-40 md:mt-20 order-1 mt-8 flex justify-center">
             <img
-              src={Logo}
+              src={Image}
               alt=""
               className="rounded-full md:w-[450px] md:h-[450px]"
             />
