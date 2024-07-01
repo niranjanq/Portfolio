@@ -1,15 +1,16 @@
 import { useState } from "react";
+import { Link as ScrollLink } from "react-scroll";
 import img from "/img.png";
 import { CgMenuRightAlt } from "react-icons/cg";
 import { IoClose } from "react-icons/io5";
 
 function Navbar() {
-  const [menu, setMenu] = useState(false); // Default to menu closed
+  const [menu, setMenu] = useState(false);
   const navItems = [
-    { id: 1, text: "Home" },
-    { id: 3, text: "Projects" },
-    { id: 4, text: "About" },
-    { id: 5, text: "Contact" },
+    { id: 1, text: "Home", to: "home" },
+    { id: 3, text: "Projects", to: "projects" },
+    { id: 4, text: "About", to: "about" },
+    { id: 5, text: "Contact", to: "contact" },
   ];
 
   return (
@@ -17,7 +18,7 @@ function Navbar() {
       <div className="max-w-screen-2xl container mx-auto px-4 md:px-20 h-16 shadow-lg top-0 left-0 right-0">
         <div className="flex justify-between h-16 items-center font-semibold">
           <div className="flex space-x-2">
-            <img src={img} className="h-12 w-12 rounded-full" alt="" />
+            <img src={img} className="h-12 w-12 rounded-full" alt="Logo" />
             <h1 className="font-semibold text-xl cursor-pointer">
               Niranj<span className="text-red-600 text-2xl">an</span> Panda
               <p>Full Stack Developer</p>
@@ -25,12 +26,20 @@ function Navbar() {
           </div>
           <div>
             <ul className="hidden md:flex space-x-8">
-              {navItems.map(({ id, text }) => (
+              {navItems.map(({ id, text, to }) => (
                 <li
                   className="hover:scale-105 duration-200 cursor-pointer"
                   key={id}
                 >
-                  {text}
+                  <ScrollLink
+                    to={to}
+                    spy={true}
+                    smooth={true}
+                    duration={500}
+                    offset={-70}
+                  >
+                    {text}
+                  </ScrollLink>
                 </li>
               ))}
             </ul>
@@ -56,13 +65,21 @@ function Navbar() {
           />
         </div>
         <ul className="flex flex-col items-center space-y-6 mt-10 font-bold text-xl">
-          {navItems.map(({ id, text }) => (
+          {navItems.map(({ id, text, to }) => (
             <li
               className="hover:scale-105 duration-200 cursor-pointer"
               key={id}
-              onClick={() => setMenu(false)} // Close menu on item click
+              onClick={() => setMenu(false)}
             >
-              {text}
+              <ScrollLink
+                to={to}
+                spy={true}
+                smooth={true}
+                duration={500}
+                offset={-70}
+              >
+                {text}
+              </ScrollLink>
             </li>
           ))}
         </ul>

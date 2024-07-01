@@ -32,8 +32,7 @@ function About() {
             build robust, scalable solutions.
           </p>
           <p className="text-lg">
-            My experience extends to database management with SQL and NoSQL
-            databases, ensuring seamless integration and performance. I am
+            My experience extends to database management with SQL ensuring seamless integration and performance. I am
             passionate about continuous learning, and leveraging the latest
             technologies to deliver exceptional digital experiences.
           </p>
