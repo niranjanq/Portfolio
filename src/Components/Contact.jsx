@@ -9,8 +9,17 @@ function Contact() {
   };
 
   return (
-    <div className="bg-gray-100 p-6">
-      <div className="bg-slate-50 text-black p-8 m-10 rounded-md shadow-xl mx-auto max-w-lg">
+    <div
+      className="bg-gray-100 p-6"
+      style={{ backgroundColor: "var(--dark-bg-color)" }}
+    >
+      <div
+        className="bg-slate-50 text-black p-8 m-10 rounded-md shadow-xl mx-auto max-w-lg"
+        style={{
+          backgroundColor: "var(--dark-bg-color)",
+          color: "var(--dark-text-color)",
+        }}
+      >
         <h1 className="text-4xl font-bold mb-4 text-center">
           Contact<span className="text-black">.</span>
         </h1>
@@ -24,7 +33,7 @@ function Contact() {
           >
             LinkedIn
           </a>{" "}
-          {} if that's more your speed.
+          if that's more your speed.
         </p>
         <div className="flex justify-center items-center text-xl">
           <a

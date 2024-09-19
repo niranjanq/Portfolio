@@ -3,8 +3,9 @@ import { Link as ScrollLink } from "react-scroll";
 import img from "/img.png";
 import { CgMenuRightAlt } from "react-icons/cg";
 import { IoClose } from "react-icons/io5";
+import { MdLightMode, MdDarkMode } from "react-icons/md";
 
-function Navbar() {
+function Navbar({ toggleTheme }) {
   const [menu, setMenu] = useState(false);
   const navItems = [
     { id: 1, text: "Home", to: "home" },
@@ -24,7 +25,7 @@ function Navbar() {
               <p>Full Stack Developer</p>
             </h1>
           </div>
-          <div>
+          <div className="flex items-center space-x-4">
             <ul className="hidden md:flex space-x-8">
               {navItems.map(({ id, text, to }) => (
                 <li
@@ -43,6 +44,16 @@ function Navbar() {
                 </li>
               ))}
             </ul>
+            <button
+              onClick={toggleTheme}
+              className="text-2xl hidden md:block ml-4"
+            >
+              {document.body.classList.contains("dark") ? (
+                <MdLightMode />
+              ) : (
+                <MdDarkMode />
+              )}
+            </button>
             <div
               onClick={() => setMenu(!menu)}
               className="md:hidden cursor-pointer"

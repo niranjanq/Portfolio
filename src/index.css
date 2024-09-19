@@ -1,3 +1,41 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+body {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dark {
+    --bg-color: #333;
+    --text-color: #fff;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Dark mode overrides */
+.dark .bg-white {
+    background-color: #1a1a1a;
+    /* Dark background */
+}
+
+.dark .text-black {
+    color: #e0e0e0;
+    /* Light text color for dark mode */
+}
+
+/* Add more dark mode styles as needed */
+/* Dark mode overrides */
+.dark .bg-white {
+    background-color: #1a1a1a;
+    /* Dark background */
+}
+
+.dark .text-black {
+    color: #e0e0e0;
+    /* Light text color for dark mode */
+}
+
+/* Add more dark mode styles as needed */
+
